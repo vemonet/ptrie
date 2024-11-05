@@ -79,6 +79,26 @@ impl<K: Eq + Ord + Clone, V: Clone> Trie<K, V> {
         self.find_node(key).and_then(|node| node.get_value())
     }
 
+    /// Gets the mutable value from the tree by key
+    ///
+    /// # Example
+    ///
+    /// ```rust
+    /// use ptrie::Trie;
+    ///
+    /// let mut t = Trie::new();
+    /// let data = "test".bytes();
+    /// let another_data = "notintest".bytes();
+    /// assert_eq!(t.get_mut(data.clone()), None);
+    /// t.insert(data.clone(), 42);
+    ///
+    /// assert_eq!(t.get_mut(data), Some(42).as_mut());
+    /// assert_eq!(t.get(another_data), None);
+    /// ```
+    pub fn get_mut<I: Iterator<Item = K>>(&mut self, key: I) -> Option<&mut V> {
+        self.find_node_mut(key).and_then(|node| node.get_value_mut())
+    }
+
     /// Sets the value pointed by a key
     ///
     /// # Example

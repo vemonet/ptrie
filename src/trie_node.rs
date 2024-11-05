@@ -61,6 +61,10 @@ impl<K: Eq + Ord + Clone, V: Clone> TrieNode<K, V> {
         self.value.as_ref()
     }
 
+    pub fn get_value_mut(&mut self) -> Option<&mut V> {
+        self.value.as_mut()
+    }
+
     pub fn may_be_leaf(&self) -> bool {
         self.value.is_some()
     }
