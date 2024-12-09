@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.7.2](https://github.com/vemonet/ptrie/compare/v0.7.1..v0.7.2) - 2024-12-09
+
+### ⚙️ Miscellaneous Tasks
+
+- Update CHANGELOG.md - ([f82e30b](https://github.com/vemonet/ptrie/commit/f82e30b6e02d8343be4f97066ac1c4423e83de9b))
+- Bump version to 0.7.2 - ([7bc0d30](https://github.com/vemonet/ptrie/commit/7bc0d30d0bf743746fddf37734acbab8f6f0ee4d))
+
+### ⛰️ Features
+
+- Exporse get_mut - ([b858503](https://github.com/vemonet/ptrie/commit/b85850393a115874dfe9a6f92b3762b7b78cc558))
+
+### 🧪 Testing
+
+- Improve tests for new get_mut() function - ([3545088](https://github.com/vemonet/ptrie/commit/354508896e007cc6c0ec048003977f80d217d3a8))
+
 ## [0.7.1](https://github.com/vemonet/ptrie/compare/v0.7.0..v0.7.1) - 2024-08-22
 
 ### ⚙️ Miscellaneous Tasks
