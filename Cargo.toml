@@ -7,7 +7,7 @@ authors = [
 ]
 description = """Generic trie data structure implementation (prefix tree) with support for different key and value types,
 and functions to search for common prefixes or postfixes."""
-keywords = ["trie", "data-structures", "generic", "prefix-tree"]
+keywords = ["trie", "data-structures", "generic", "prefix-tree", "no_std"]
 categories = ["data-structures"]
 homepage = "https://github.com/vemonet/ptrie"
 repository = "https://github.com/vemonet/ptrie.git"
@@ -26,6 +26,8 @@ criterion = "0.5"
 
 
 [features]
+default = ["std"]
+std = []
 serde = ["dep:serde"]
 
 [profile.release]

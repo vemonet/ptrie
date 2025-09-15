@@ -2,10 +2,12 @@
 
 use crate::error::TrieError;
 use crate::trie_node::TrieNode;
+use alloc::string::ToString;
+use alloc::vec::Vec;
+use core::clone::Clone;
+use core::cmp::{Eq, Ord};
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
-use std::clone::Clone;
-use std::cmp::{Eq, Ord};
 
 /// Prefix tree object, contains 1 field for the `root` node of the tree
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
@@ -469,7 +471,7 @@ impl<K: Eq + Ord + Clone, V: Clone> Trie<K, V> {
 
 impl<'a, K: Clone + Ord, V: Clone> IntoIterator for &'a Trie<K, V> {
     type IntoIter = TrieIterator<'a, K, V>;
-    type Item = (std::vec::Vec<K>, V);
+    type Item = (alloc::vec::Vec<K>, V);
     fn into_iter(self) -> Self::IntoIter {
         self.iter()
     }
