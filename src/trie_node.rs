@@ -1,9 +1,10 @@
 //! Struct and functions for the `Trie` nodes
 
+use alloc::vec::Vec;
+use core::clone::Clone;
+use core::cmp::{Eq, Ord};
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
-use std::clone::Clone;
-use std::cmp::{Eq, Ord};
 
 /// A node in the `Trie`, it holds a value, and a list of children nodes
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]

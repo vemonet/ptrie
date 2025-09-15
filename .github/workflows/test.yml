@@ -31,6 +31,7 @@ jobs:
       CARGO_TERM_COLOR: always
     steps:
       - uses: actions/checkout@v4
+      - run: cargo build --no-default-features
       - run: cargo build --all-features
       - run: cargo doc
       - run: cargo test --all-features
